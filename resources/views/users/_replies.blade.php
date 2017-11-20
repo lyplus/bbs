@@ -7,7 +7,7 @@
                 {{ $reply->topic->title }}
             </a>
 
-            <div class="reply-content" style="margin: 6px 0;">
+            <div class="rpely-content" style="margin: 6px 0;">
                 {!! $reply->content !!}
             </div>
 

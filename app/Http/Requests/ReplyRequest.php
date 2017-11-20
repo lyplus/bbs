@@ -14,7 +14,8 @@ class ReplyRequest extends Request
     {
         return [
 
-            'content.required' => '回复内容不能为空。',
+            'content.required' => '回复内容不能为空',
+            'content.min' => '回复内容至少为2个字符',
         ];
     }
 }
