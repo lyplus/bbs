@@ -14,6 +14,14 @@ class Topic extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function replies(){
+        return $this->hasMany(Reply::class);
+    }
+    public function link($params = [])
+    {
+    return route('topics.show', array_merge([$this->id, $this->slug], $params));
+    }
+
     public function scopeWithOrder($query, $order)
         {
             // 不同的排序，使用不同的数据读取逻辑
